@@ -23,7 +23,9 @@ def view_command(profile: str) -> None:
     if password := wpv.get_password(profile):
         click.echo(password)
     else:
-        click.echo(f"No password found for profile '{profile}', does it exist?")
+        click.echo(
+            f"No password found for profile '{profile}', does it exist?"
+        )
 
 
 if __name__ == "__main__":

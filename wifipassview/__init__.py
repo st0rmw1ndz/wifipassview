@@ -1,1 +1,1 @@
-from wifipassview.wifipassview import *
+from wifipassview.wifipassview import *  # noqa: F403
