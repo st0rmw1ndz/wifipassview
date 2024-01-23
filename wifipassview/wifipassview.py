@@ -5,8 +5,10 @@ from typing import List
 
 
 def get_profiles_list() -> List[str]:
-    """Gets the list of Wi-Fi profiles."""
+    """Gets the list of Wi-Fi profiles on the system.
 
+    :return: List of Wi-Fi profiles on the system.
+    """
     try:
         output = (
             subprocess.check_output(["netsh", "wlan", "show", "profiles"])
@@ -25,8 +27,11 @@ def get_profiles_list() -> List[str]:
 
 
 def get_password(profile: str) -> str:
-    """Gets the password of a given Wi-Fi profile."""
+    """Gets the password for a given Wi-Fi profile.
 
+    :param profile: Wi-Fi profile to get the password of.
+    :return: Password for the given Wi-Fi profile.
+    """
     try:
         output = (
             subprocess.check_output(
